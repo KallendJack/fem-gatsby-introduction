@@ -8,9 +8,9 @@ public_folder: /assets
 collections:
   - name: page
     label: Page
-    folder: page
+    folder: markdown-pages
     create: true
     fields:
       - { name: slug, label: Slug }
       - { name: title, label: Title }
-      - { name: description, label: Description, widget: markdown }
+      - { name: description, label: Description }
