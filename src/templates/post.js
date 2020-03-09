@@ -17,8 +17,6 @@ export const query = graphql`
 `
 
 const Post = ({ data: { mdx: post } }) => {
-  console.log(post)
-
   return (
     <Layout>
       <h1>{post.frontmatter.title}</h1>
