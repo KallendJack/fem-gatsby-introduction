@@ -4,7 +4,6 @@ const Test = props => {
   const [test, setTest] = useState('')
 
   const printState = () => {
-    const string = 'hello'
     setTest('testing')
     console.log(test)
   }
