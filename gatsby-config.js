@@ -5,6 +5,14 @@ module.exports = {
     author: `@gatsbyjs`
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout/layout.js')
+        }
+      }
+    },
     'gatsby-plugin-sass',
     `gatsby-plugin-react-helmet`,
     {
