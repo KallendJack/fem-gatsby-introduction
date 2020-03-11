@@ -40,7 +40,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build && aws s3 cp public/ s3://fem-aws.co.uk --recursive && aws cloudfront create-invalidation --distribution-id E3JFWII61Q0ZA8 --paths '/*'"
   },
   "repository": {
     "type": "git",
