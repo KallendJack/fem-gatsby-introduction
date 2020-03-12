@@ -5,6 +5,20 @@ module.exports = {
     author: `@gatsbyjs`
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: 'fem-aws.co.uk',
+        protocol: 'https',
+        hostname: 'fem-aws.co.uk'
+      }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: 'fem-aws.co.uk'
+      }
+    },
     `gatsby-plugin-netlify-cms`,
     {
       resolve: 'gatsby-plugin-mdx',

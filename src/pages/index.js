@@ -18,6 +18,7 @@ const IndexPage = () => {
           <h3>{post.title}</h3>
           <span>{post.author}</span>
           <Link to={post.slug}>View</Link>
+          Hello
         </div>
       ))}
     </Layout>

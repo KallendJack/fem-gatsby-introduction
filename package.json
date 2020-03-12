@@ -9,11 +9,13 @@
     "@mdx-js/react": "^1.5.7",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
+    "gatsby-plugin-canonical-urls": "^2.1.21",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-mdx": "^1.0.77",
     "gatsby-plugin-netlify-cms": "^4.1.41",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-s3": "^0.3.3",
     "gatsby-plugin-sass": "^2.1.30",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-source-filesystem": "^2.1.46",
@@ -41,7 +43,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build && aws s3 cp public/ s3://fem-aws.co.uk --recursive && aws cloudfront create-invalidation --distribution-id E3JFWII61Q0ZA8 --paths '/*'"
+    "deploy": "gatsby build && gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E3JFWII61Q0ZA8 --paths \"/*\""
   },
   "repository": {
     "type": "git",
